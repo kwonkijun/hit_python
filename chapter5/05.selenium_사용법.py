@@ -13,6 +13,6 @@ driver = webdriver.Chrome(service=sv, options=chrome_options)
 
 driver.implicitly_wait(15) # 페이지가 로딩될 때까지 최대 15초를 기다림
 driver.get("https://startcoding-crawling.herokuapp.com/")
-title = driver.find_elements(By.CSS_SELECTOR, '.site-heading > h2')
-print(title)
+title = driver.find_element(By.CSS_SELECTOR, '.site-heading > h1')
+print(title.text)
 
